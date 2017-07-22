@@ -10,17 +10,23 @@ Each Dockerfile should contain a README that includes the following:
  * Version of OS and Docker that it was built/tested against
  * Instructions for building the Docker image
 
+For example: 
 --
-    For example: docker build --rm=true -t my/image .
+```bash
+    docker build --rm=true -t my/image .
+```
 --
 
  * Instructions for running the image, including examples for persistent data, port mapping, etc.
  * Examples for testing and/or validating the functionality of the image.
  * Do not include executable scripts. Provide them and mark them as executable in the Dockerfile
 
+For example: 
 --
+```bash
     ADD ./script.sh /usr/bin/
     RUN chmod -v +x /usr/bin/script.sh
+```
 --
 
  * If creating a container for a specific language, specify the version of that language.
